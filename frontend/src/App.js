@@ -5,6 +5,7 @@ import Home from './HomePage';
 import WelcomeBackPage from './WelcomeBackPage';
 import CameraPage from './CameraPage';
 import MedicationConfirmation from './MedicationConfirmation';
+import Login from './LoginPage';
 
 function App() {
     //js
@@ -21,6 +22,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/welcome-back" element={<WelcomeBackPage />} />
         <Route path="/camera" element={<CameraPage />} />
         <Route path="/" element={<Home />} />
