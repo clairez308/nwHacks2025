@@ -1,0 +1,171 @@
+.photo {
+    background-color: #fefbf6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .photo .div-2 {
+    background-color: #fefbf6;
+    height: 869.14px;
+    overflow: hidden;
+    position: relative;
+    width: 401px;
+  }
+  
+  .photo .status-bar-instance {
+    height: 42px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 401px !important;
+  }
+  
+  .photo .design-component-instance-node {
+    height: 42px !important;
+  }
+  
+  .photo .status-bar-2 {
+    left: 343px !important;
+    top: 20px !important;
+    width: 23px !important;
+  }
+  
+  .photo .status-bar-3 {
+    border: 0.93px solid !important;
+    border-radius: 2.49px !important;
+    width: 21px !important;
+  }
+  
+  .photo .status-bar-4 {
+    border-radius: 1.24px !important;
+    width: 17px !important;
+  }
+  
+  .photo .status-bar-5 {
+    left: 21px !important;
+    top: 3px !important;
+  }
+  
+  .photo .status-bar-6 {
+    height: 10px !important;
+    left: 324px !important;
+    top: 20px !important;
+    width: 14px !important;
+  }
+  
+  .photo .status-bar-7 {
+    height: 10px !important;
+    left: 303px !important;
+    top: 20px !important;
+    width: 16px !important;
+  }
+  
+  .photo .status-bar-8 {
+    height: 20px !important;
+    left: 37px !important;
+    top: 10px !important;
+    width: 50px !important;
+  }
+  
+  .photo .status-bar-9 {
+    font-size: 14px !important;
+    letter-spacing: -0.28px !important;
+    width: 50px !important;
+  }
+  
+  .photo .overlap {
+    height: 130px;
+    left: 0;
+    position: absolute;
+    top: 739px;
+    width: 401px;
+  }
+  
+  .photo .nav-bar {
+    box-shadow: 0px -3.73px 7.46px #00000040;
+    height: 81px;
+    left: 0;
+    position: absolute;
+    top: 49px;
+    width: 401px;
+  }
+  
+  .photo .overlap-2 {
+    height: 81px;
+    position: relative;
+  }
+  
+  .photo .menu {
+    background-color: #ffffff;
+    box-shadow: 0px -9.33px 22.38px #e4e4e440;
+    height: 81px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 401px;
+  }
+  
+  .photo .frame {
+    align-items: flex-start;
+    display: flex;
+    height: 26px;
+    justify-content: space-between;
+    left: 59px;
+    position: relative;
+    top: 20px;
+    width: 283px;
+  }
+  
+  .photo .iconly-bulk-home {
+    height: 29.84px !important;
+    margin-bottom: -3.62px !important;
+    position: relative !important;
+    width: 29.84px !important;
+  }
+  
+  .photo .ellipse {
+    height: 27.04px;
+    margin-bottom: -0.82px;
+    position: relative;
+    width: 28.91px;
+  }
+  
+  .photo .indicator {
+    background-color: #0000004c;
+    border-radius: 2.33px;
+    height: 5px;
+    left: 129px;
+    position: absolute;
+    top: 68px;
+    width: 144px;
+  }
+  
+  .photo .ellipse-2 {
+    background-color: #fb7777;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 38.5px / 38px;
+    height: 76px;
+    left: 163px;
+    position: absolute;
+    top: 0;
+    width: 77px;
+  }
+  
+  .photo .rectangle {
+    background-color: #8a8888;
+    height: 485px;
+    left: 27px;
+    position: absolute;
+    top: 172px;
+    width: 349px;
+  }
+  
+  .photo .component-1 {
+    left: 35px !important;
+    position: absolute !important;
+    top: 57px !important;
+  }
+  
