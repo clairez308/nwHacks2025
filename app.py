@@ -1,5 +1,10 @@
 import cv2
 import requests
+import spacy
+import medspacy
+
+# Load the MedSpaCy model
+nlp = spacy.load("en_medspacy_model")
 
 #Our private API key
 api_key = "K86040665488957"
@@ -57,7 +62,12 @@ with open(image_path, 'rb') as f:
     else:
         print("Error: ", result['ErrorMessage'])
 
-
 c.release()
 cv2.destroyAllWindows()
 
+# Process the text
+doc = nlp(extracted_text)
+
+# Extract clinical entities
+for ent in doc.ents:
+    print(ent.text, ent.label_)
