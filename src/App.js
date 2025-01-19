@@ -1,11 +1,16 @@
 import React from 'react';
-import { ElementStartPage } from './Main.jsx';   // Correct path
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import SignUp from './SignUp';
+import HomePage from './HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <ElementStartPage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 
