@@ -1,0 +1,29 @@
+.welcome-back-page {
+    text-align: center;
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .medication {
+    margin: 10px 0;
+  }
+  
+  .plus-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .plus-button:hover {
+    background-color: #45a049;
+  }
+  
