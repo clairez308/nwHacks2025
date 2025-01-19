@@ -13,6 +13,7 @@ function CameraPage() {
     try {
       const response = await fetch('http://localhost:5000/launch-script');
       const result = await response.json();
+      console.log(result);
       setScriptOutput(result.message || result.error);
     } catch (error) {
       console.error('Error launching script:', error);

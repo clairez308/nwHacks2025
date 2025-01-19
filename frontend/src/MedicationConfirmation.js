@@ -1,54 +1,41 @@
+// import React from 'react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MedicationConfirmation.css';
+// import text from "/backend/text.txt";
+
 
 function ConfirmationPage() {
+  const [medications, setMedications] = useState([]);
   const navigate = useNavigate();
-  const [medicationData, setMedicationData] = useState({
-    medication: 'Loading...',
-    dosage: 'Loading...',
-    frequency: 'Loading...',
-    duration: 'Loading...'
-  });
 
-  useEffect(() => {
-    const fetchMedicationData = async () => {
-      try {
-        const response = await fetch('/output.txt');
-        const text = await response.text();
-        const data = parseMedicationData(text);
-        setMedicationData(data);
-      } catch (error) {
-        console.error('Error fetching medication data:', error);
-        setMedicationData({
-          medication: 'Error loading',
-          dosage: 'Error loading',
-          frequency: 'Error loading',
-          duration: 'Error loading'
-        });
-      }
-    };
 
-    fetchMedicationData();
+   useEffect(()  => {
+    fetch("localhost:3000/text.txt.txt").then (r => console.log(r));
+    
+    // console.log(text);
+    // // Fetch medication details from the backend
+    // fetch('http://localhost:5000/get-medication-details')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     if (data.medications) {
+    //       setMedications(data.medications);
+    //     }
+    //   })
+    //   .catch(error => console.error('Error fetching medication details:', error));
   }, []);
 
-  const parseMedicationData = (text) => {
-    const lines = text.split('\n');
-    return {
-      medication: lines[1].split(': ')[1],
-      dosage: lines[2].split(': ')[1],
-      frequency: lines[3].split(': ')[1],
-      duration: lines[4].split(': ')[1]
-    };
-  };
 
   const retake = () => {
     navigate('/camera');
   };
-
   const save = () => {
-    navigate('/welcome-back', { state: { fromConfirmation: true } });
+    navigate('/welcome-back');
   };
+
+//   var fs = requires('fs');
+//   var path = requires('path');
+//   fs.readFileSync("/backend/text.txt")
 
   return (
     <div className="mobile-container">
@@ -60,20 +47,32 @@ function ConfirmationPage() {
         </div>
       </header>
 
+
       <main className="main-content">
         <h1>What we got</h1>
         <p className="subtitle">Check all the aspects are correct!</p>
+
+
         
-        <div className="medication-card">
-          <h2>{medicationData.medication}</h2>
-          <div className="medication-details">
-            <p>{medicationData.medication}</p>
-            <p>Dosage: {medicationData.dosage}</p>
-            <p>Frequency: {medicationData.frequency}</p>
-            <input type="time" min="00:00" max="23:59" className="edit-time-button" placeholder='Edit: time (24:00)'/>
-            <p>Duration: {medicationData.duration}</p>
+
+        {medications.map((med, index) => (
+          <div className="medication-card" key={index}>
+            <h2>{med.medication_name}</h2>
+            <div className="medication-details">
+              <p>Dosage: {med.dosage}</p>
+              <p>Frequency: {med.frequency}</p>
+              <input
+                type="time"
+                min="00:00"
+                max="23:59"
+                className="edit-time-button"
+                placeholder="Edit: time (24:00)"
+              />
+              <p>Duration: {med.duration}</p>
+            </div>
           </div>
-        </div>
+        ))}
+
 
         <div className="action-buttons">
           <button className="action-button retake" onClick={retake}>Retake</button>
@@ -84,4 +83,60 @@ function ConfirmationPage() {
   );
 }
 
+
 export default ConfirmationPage;
+
+
+
+
+// function ConfirmationPage() {
+//     const navigate = useNavigate();
+
+
+//   const retake = () => {
+//     navigate('/camera');
+//   };
+//   const save = () => {
+//     navigate('/welcome-back');
+//   };
+//   return (
+//     <div className="mobile-container">
+
+
+//       <header className="header">
+//         <div className="app-name">MedEcho</div>
+//         <div className="profile">
+//           <span>Claire</span>
+//           <div className="profile-image"></div>
+//         </div>
+//       </header>
+
+
+//       <main className="main-content">
+//         <h1>What we got</h1>
+//         <p className="subtitle">Check all the aspects are correct!</p>
+       
+//         <div className="medication-card">
+//           <h2>Amoxicillin</h2>
+//           <div className="medication-details">
+//             <p>Dosage: 500mg</p>
+//             <p>Frequency: once per day</p>
+//             <input type="time" min="00:00" max="23:59" className="edit-time-button" placeholder='Edit: time (24:00)'/>
+//             <p>Duration: 30 days</p>
+//           </div>
+//         </div>
+
+
+//         <div className="action-buttons">
+//           <button className="action-button retake" onClick={retake}>Retake</button>
+//           <button className="action-button save" onClick={save}>Save</button>
+//         </div>
+//       </main>
+
+
+//     </div>
+//   );
+// }
+
+
+// export default ConfirmationPage;

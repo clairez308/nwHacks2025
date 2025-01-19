@@ -1,0 +1,3 @@
+Medication Name: Amoxicillin
+Dosage: 20 mg
+Frequency: once a day
