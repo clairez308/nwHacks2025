@@ -6,9 +6,9 @@ function CameraPage() {
 
   const openCamera = async () => {
     try {
-      const response = await fetch('http://localhost:5000/launch-script'); // Ensure the URL matches the Flask endpoint
+      const response = await fetch('http://localhost:5000/launch-script');
       const result = await response.json();
-      setScriptOutput(result.output || result.error);
+      setScriptOutput(result.message || result.error);
     } catch (error) {
       console.error('Error launching script:', error);
       setScriptOutput('Error launching script');
