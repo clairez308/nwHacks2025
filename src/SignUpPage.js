@@ -13,8 +13,9 @@ function SignUp() {
 
   return (
     <div className="signup-page">
-      <h1>MedEcho</h1>
-      <h2>Sign up</h2>
+      <h2>MedEcho</h2>
+      <h1>Welcome Back!</h1>
+      <p>Input your details to sign back in.</p>
       <form>
         <div className="form-group">
           <label>Email</label>
@@ -24,12 +25,16 @@ function SignUp() {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
         </div>
+<<<<<<< HEAD:src/SignUp.js
+        <button type="submit" className="submit-button">Login</button>
+=======
         <button type="button" className="submit-button" onClick={handleSignUp}>
           Sign Up
         </button>
+>>>>>>> 6a8d391c8b54867149d8c3fb5803a894e04bed97:src/SignUpPage.js
       </form>
       <div className="login-link">
-        Already have an account? <Link to="/">Log in</Link>
+        Need to make a new account? <Link to="/">Sign Up</Link>
       </div>
     </div>
   );
