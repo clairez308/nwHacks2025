@@ -1,4 +1,20 @@
-.element-start-page {
+/* .element-start-page {
+    background-color: #e3961b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .element-start-page .div-2 {
+    background-color: #e3961b;
+    height: 869.14px;
+    overflow: hidden;
+    position: relative;
+    width: 401px;
+  }
+   */
+   .element-start-page {
     background-color: #e3961b;
     display: flex;
     flex-direction: row;
@@ -51,3 +67,106 @@
     font-weight: bold;
     cursor: pointer;
 }
+  /* .element-start-page .status-bar-2 {
+    left: 343px !important;
+    top: 20px !important;
+    width: 23px !important;
+  }
+  
+  .element-start-page .status-bar-3 {
+    border: 0.93px solid !important;
+    border-radius: 2.49px !important;
+    width: 21px !important;
+  }
+  
+  .element-start-page .status-bar-4 {
+    border-radius: 1.24px !important;
+    width: 17px !important;
+  }
+  
+  .element-start-page .status-bar-5 {
+    left: 21px !important;
+    top: 3px !important;
+  }
+  
+  .element-start-page .status-bar-6 {
+    height: 10px !important;
+    left: 324px !important;
+    top: 20px !important;
+    width: 14px !important;
+  }
+  
+  .element-start-page .status-bar-7 {
+    height: 10px !important;
+    left: 303px !important;
+    top: 20px !important;
+    width: 16px !important;
+  }
+  
+  .element-start-page .status-bar-8 {
+    height: 20px !important;
+    left: 37px !important;
+    top: 10px !important;
+    width: 50px !important;
+  }
+  
+  .element-start-page .status-bar-9 {
+    font-size: 14px !important;
+    letter-spacing: -0.28px !important;
+    width: 50px !important;
+  }
+  
+  .element-start-page .nav-bar {
+    box-shadow: 0px -3.73px 7.46px #e3961b;
+    height: 81px;
+    left: 0;
+    position: absolute;
+    top: 788px;
+    width: 401px;
+  }
+  
+  .element-start-page .indicator {
+    background-color: #e3961b;
+    border-radius: 2.33px;
+    height: 5px;
+    left: 129px;
+    position: relative;
+    top: 68px;
+    width: 144px;
+  }
+  
+  .element-start-page .frame {
+    align-items: center;
+    background-color: #708238;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    height: 55px;
+    justify-content: center;
+    left: 131px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 572px;
+    width: 134px;
+  }
+  
+  .element-start-page .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Inter", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: -2.50px;
+    margin-right: -2.50px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .element-start-page .logo-instance {
+    left: 92px !important;
+    position: absolute !important;
+    top: 325px !important;
+  }
+   */

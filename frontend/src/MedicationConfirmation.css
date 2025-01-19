@@ -3,13 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    
   }
   
   .mobile-container {
-    min-height: 100vh;
-    position: relative;
-    padding: 40px 20px 80px;
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -74,9 +70,7 @@
   }
   
   .medication-card {
-    background-color: #FFFFFF;
-    border-style: solid;
-    border-color: #446622;
+    background-color: #E6D5C3;
     border-radius: 12px;
     padding: 20px;
     margin: 20px 0;
@@ -96,8 +90,7 @@
   
   .edit-time-button {
     background-color: rgba(255, 255, 255, 0.5);
-    border-style: solid;
-    border-color: #446622;
+    border: none;
     border-radius: 8px;
     padding: 8px 16px;
     margin: 8px 0;
@@ -150,6 +143,23 @@
     border: none;
     padding: 8px;
     color: #666;
+  }
+  
+  .plus-button-container {
+    transform: translateY(-20px);
+  }
+  
+  .plus-button {
+    background-color: #E6D5C3;
+    color: #333;
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   @supports (-webkit-touch-callout: none) {

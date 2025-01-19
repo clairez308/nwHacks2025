@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,9 +13,8 @@
     flex-direction: column;
     align-items: center;
   }
-
   .logo{
-    width: 230px;
+    width: 200px;
     height: 200px ;
   }
   

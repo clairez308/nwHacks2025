@@ -1,3 +1,33 @@
+/* .welcome-back-page {
+    text-align: center;
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .medication {
+    margin: 10px 0;
+  }
+  
+  .plus-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .plus-button:hover {
+    background-color: #45a049;
+  }
+   */
+
    .welcome-back-page {
     background-color: white;
     min-height: 100vh;
@@ -27,6 +57,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    background-color: #f0f0f0;
   }
   
   h1 {
@@ -49,9 +80,7 @@
   }
   
   .medication {
-    background-color: #ffffff;
-    border-style: solid;
-    border-color: #446622;
+    background-color: #E6D5C3;
     border-radius: 12px;
     padding: 16px;
     text-align: left;

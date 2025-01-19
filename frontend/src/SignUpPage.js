@@ -13,13 +13,7 @@ function SignUp() {
 
   return (
     <div className="signup-page">
-        <header className="header">
-          <div className="app-name">MedEcho</div>
-          <div className="profile">
-            <span>Claire</span>
-            <div className="profile-image"></div>
-          </div>
-        </header>
+      <h2>MedEcho</h2>
       <h1>Welcome Back!</h1>
       <p>Input your details to sign back in.</p>
       <form>
@@ -36,7 +30,7 @@ function SignUp() {
         </button>
       </form>
       <div className="login-link">
-        Need to make a new account? <Link to="/login">Sign Up</Link>
+        Need to make a new account? <Link to="/">Sign Up</Link>
       </div>
     </div>
   );
