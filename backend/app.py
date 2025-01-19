@@ -5,6 +5,7 @@ import medspacy
 import re
 import schedule
 import time
+from playsound import playsound
 
 # Load the MedSpaCy model
 nlp = spacy.load("en_core_web_sm")
@@ -130,10 +131,15 @@ else:
 
 
 
+# Function to play the reminder audio and display the message
+def play_audio_reminder(medication):
+    print(f"Time to take your {medication['medication_name']} ({medication['dosage']}) {medication['frequency']}")
+    playsound("reminder.mp3")  # Replace with the path to your audio file
+
 # Function to create a reminder
 def create_reminder(medication):
-    schedule.every().day.at("21:21").do(lambda: print(f"Time to take your {medication['medication_name']} ({medication['dosage']}) {medication['frequency']}"))
-    
+    schedule.every().day.at("21:21").do(lambda: play_audio_reminder(medication))
+
     while True:
         schedule.run_pending()
         time.sleep(1)

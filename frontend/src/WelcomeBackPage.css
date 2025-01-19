@@ -1,4 +1,4 @@
-.welcome-back-page {
+/* .welcome-back-page {
     text-align: center;
     background-color: #f8f8f8;
     height: 100vh;
@@ -26,4 +26,119 @@
   .plus-button:hover {
     background-color: #45a049;
   }
+   */
+
+   .welcome-back-page {
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 20px 80px;
+  }
   
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .app-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    color: #557B33;
+    font-size: 28px;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin: 8px 0 24px;
+    text-align: left;
+  }
+  
+  .medications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .medication {
+    background-color: #E6D5C3;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .medication h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  
+  .medication p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 16px;
+    border-top: 1px solid #eee;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .plus-button-container {
+    transform: translateY(-20px);
+  }
+  
+  .plus-button {
+    background-color: #557B33;
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .plus-button:hover {
+    background-color: #446622;
+  }
