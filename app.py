@@ -67,11 +67,7 @@ c.release()
 cv2.destroyAllWindows()
 
 # Example prescription text
-prescription_text = """
-Take 20 mg of Lisinopril once a day after meals. 
-Take 5 mg of Amlodipine twice a day in the morning and evening. 
-Take 50 mg of Metformin three times a day with food.
-"""
+prescription_text = extracted_text
 
 # Function to extract medication details
 def extract_medication_details(text):
@@ -87,6 +83,8 @@ def extract_medication_details(text):
     
     # Look for matches for dosage, frequency, and medication name in the text
     for sentence in doc.sents:
+        print(sentence)
+        print("JHDJHDBHJ")
         medication_name = None
         dosage = None
         frequency = None
@@ -115,7 +113,6 @@ def extract_medication_details(text):
                 'dosage': dosage,
                 'frequency': frequency
             })
-    
     return medications
 
 # Extract medication details from prescription text
