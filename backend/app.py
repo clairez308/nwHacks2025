@@ -22,8 +22,6 @@ c = cv2.VideoCapture(0)
 if not c.isOpened():
     print("Error: Could not open camera.")
 else:
-    print("Press 's' to save the image")
-
     while True:
         
         ret, frame = c.read()
@@ -125,6 +123,7 @@ if medications:
         print(f"Medication Name: {med['medication_name']}")
         print(f"Dosage: {med['dosage']}")
         print(f"Frequency: {med['frequency']}")
+        print()
 else:
     print("No medication information extracted.")
 
@@ -137,7 +136,7 @@ def play_audio_reminder(medication):
 
 # Function to create a reminder
 def create_reminder(medication):
-    schedule.every().day.at("07:00").do(lambda: play_audio_reminder(medication))
+    schedule.every().day.at("21:21").do(lambda: play_audio_reminder(medication))
 
     while True:
         schedule.run_pending()
