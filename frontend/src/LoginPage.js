@@ -13,7 +13,13 @@ function SignUpPage() {
 
   return (
     <div className="signup-page">
-      <h2>MedEcho</h2>
+        <header className="header">
+          <div className="app-name">MedEcho</div>
+          <div className="profile">
+            <span>Claire</span>
+            <div className="profile-image">😎</div>
+          </div>
+        </header>
       <h1>Create an Account</h1>
       <p>Input your details to sign up.</p>
       <form>
@@ -26,8 +32,8 @@ function SignUpPage() {
           <input type="password" placeholder="Enter your password" />
         </div>
         <div className="form-group">
-          <label>Re - Enter Password</label>
-          <input type="password" placeholder="Re - Enter your password" />
+          <label>Re-enter Password</label>
+          <input type="password" placeholder="Re-enter your password" />
         </div>
         <button type="button" className="submit-button" onClick={handleSignUp}>
           Sign Up

@@ -1,9 +1,34 @@
 .signup-page {
-    padding: 40px;
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 20px 80px;
     gap: 10px;
+    
+  }
+  .header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .app-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
   }
   
   h1, h2 {
