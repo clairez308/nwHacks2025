@@ -25,7 +25,9 @@ function SignUp() {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
         </div>
-        <button type="submit" className="submit-button">Login</button>
+        <button type="button" className="submit-button" onClick={handleSignUp}>
+          Login
+        </button>
       </form>
       <div className="login-link">
         Need to make a new account? <Link to="/">Sign Up</Link>

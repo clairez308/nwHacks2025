@@ -6,6 +6,16 @@ import WelcomeBackPage from './WelcomeBackPage';
 import CameraPage from './CameraPage';
 
 function App() {
+    //js
+    const script = document.createElement("script");
+    script.src = "https://pyscript.net/latest/pyscript.js";
+    script.defer = true;  // Ensures the script loads after the HTML
+    document.head.appendChild(script);
+
+    //css
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://pyscript.net/latest/pyscript.css";
   return (
     <Router>
       <Routes>
