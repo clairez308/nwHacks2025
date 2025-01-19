@@ -43,11 +43,6 @@ function ConfirmationPage() {
         </div>
       </main>
 
-      <nav className="bottom-nav">
-        <div className="plus-button-container">
-          <button className="plus-button">+</button>
-        </div>
-      </nav>
     </div>
   );
 }

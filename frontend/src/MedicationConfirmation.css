@@ -145,23 +145,6 @@
     color: #666;
   }
   
-  .plus-button-container {
-    transform: translateY(-20px);
-  }
-  
-  .plus-button {
-    background-color: #E6D5C3;
-    color: #333;
-    border: none;
-    width: 44px;
-    height: 44px;
-    font-size: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
   @supports (-webkit-touch-callout: none) {
     .mobile-container {
       height: -webkit-fill-available;
