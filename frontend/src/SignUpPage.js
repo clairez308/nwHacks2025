@@ -30,7 +30,7 @@ function SignUp() {
         </button>
       </form>
       <div className="login-link">
-        Need to make a new account? <Link to="/">Sign Up</Link>
+        Need to make a new account? <Link to="/login">Sign Up</Link>
       </div>
     </div>
   );

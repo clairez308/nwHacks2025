@@ -1,22 +1,43 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './SignUpPage.css';
 
-const LoginPage = () => {
-    return (
-        <div style={{ backgroundColor: 'blue', color: 'white' }}>
-            <h1>Login Page</h1>
-            <form>
-                 <label htmlFor="username">Username:</label>
-                <input type="text" id="username" />
+function SignUpPage() {
+  const navigate = useNavigate();
 
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" />
+  const handleSignUp = () => {
+    // Sign up logic here
+    navigate('/welcome-back');
+  };
 
-                <button type="submit" style={{ backgroundColor: 'green' }}>
-                    Login
-                </button>
-            </form>
+  return (
+    <div className="signup-page">
+      <h2>MedEcho</h2>
+      <h1>Create an Account</h1>
+      <p>Input your details to sign up.</p>
+      <form>
+        <div className="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" />
         </div>
-    );
-};
+        <div className="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" />
+        </div>
+        <div className="form-group">
+          <label>Re - Enter Password</label>
+          <input type="password" placeholder="Re - Enter your password" />
+        </div>
+        <button type="button" className="submit-button" onClick={handleSignUp}>
+          Sign Up
+        </button>
+      </form>
+      <div className="login-link">
+        Already have an account? <Link to="/signup">Login</Link>
+      </div>
+    </div>
+  );
+}
 
-export default LoginPage;
+export default SignUpPage;
