@@ -4,10 +4,11 @@ const { exec } = require('child_process');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.get('/app.py', (req, res) => {
+app.get('/launch-script', (req, res) => {
   exec('python app.py', (error, stdout, stderr) => {
     if (error) {
       console.error(`Execution error: ${error.message}`);
+      console.error(`Error stack: ${error.stack}`);
       return res.status(500).send(`Error: ${error.message}`);
     }
     if (stderr) {
