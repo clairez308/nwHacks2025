@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .mobile-container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+    position: fixed;
+  }
+  
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 0;
+    height: 44px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+  }
+  
+  .app-name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .profile span {
+    font-size: 14px;
+  }
+  
+  .profile-image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+  }
+  
+  .main-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  h1 {
+    color: #557B33;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: -15px;
+  }
+  
+  .medication-card {
+    background-color: #E6D5C3;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .medication-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .medication-details p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .edit-time-button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .retake {
+    background-color: #557B33;
+    color: white;
+  }
+  
+  .save {
+    background-color: #557B33;
+    color: white;
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    color: #666;
+  }
+  
+  .plus-button-container {
+    transform: translateY(-20px);
+  }
+  
+  .plus-button {
+    background-color: #E6D5C3;
+    color: #333;
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @supports (-webkit-touch-callout: none) {
+    .mobile-container {
+      height: -webkit-fill-available;
+    }
+  }
