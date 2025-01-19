@@ -118,7 +118,16 @@ def extract_medication_details(text):
 
 # Extract medication details from prescription text
 medications = extract_medication_details(prescription_text)
+def save_output_to_file():
+     with open("output.txt", "w") as f: 
+       f.write("Medication Information:\n") 
+       f.write(f"Medication: {extracted_text['medication']}\n") 
+       f.write(f"Dosage: {extracted_text['dosage']}\n") 
+       f.write(f"Frequency: {extracted_text['frequency']}\n") 
+       f.write(f"Duration: {extracted_text['duration']}\n") 
 
+if __name__ == "__main__": 
+    save_output_to_file()
 # Print the extracted details
 if medications:
     for med in medications:
