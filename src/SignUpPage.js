@@ -25,13 +25,9 @@ function SignUp() {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
         </div>
-<<<<<<< HEAD:src/SignUp.js
-        <button type="submit" className="submit-button">Login</button>
-=======
         <button type="button" className="submit-button" onClick={handleSignUp}>
-          Sign Up
+          Login
         </button>
->>>>>>> 6a8d391c8b54867149d8c3fb5803a894e04bed97:src/SignUpPage.js
       </form>
       <div className="login-link">
         Need to make a new account? <Link to="/">Sign Up</Link>
