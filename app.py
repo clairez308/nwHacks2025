@@ -1,11 +1,19 @@
 import cv2
+import requests
 
+#Our private API key
+api_key = "K86040665488957"
+
+#The API url
+url = "https://api.ocr.space/parse/image"
+
+#Opening the camera
 c = cv2.VideoCapture(0)
-n = 1
+
 if not c.isOpened():
     print("Error: Could not open camera.")
 else:
-    print("Press 's' to save the image or 'q' to quit.")
+    print("Press 's' to save the image")
 
     while True:
         
@@ -20,11 +28,35 @@ else:
         key = cv2.waitKey(1) & 0xFF
         
         if key == ord('s'):  
-            cv2.imwrite("captured_image"+str(n)+".jpg", frame)
-            print("Image saved as 'captured_image" + str(n) + ".jpg'.")
-            n+=1
-        elif key == ord('q'):
+            image_path = "captured_image1.jpg"
+            cv2.imwrite(image_path, frame)
+            print("Image saved as "+image_path+ ".") #can remove later
             break
+
+with open(image_path, 'rb') as f:
+    # Define the request payload
+    payload = {
+        'apikey': api_key,  # Your OCR API key
+        'language': 'eng'   # Language of the text in the image (use 'eng' for English)
+    }
+    
+    # Define the files (image) to send in the request
+    files = {'file': f}
+    
+    # Make the POST request
+    response = requests.post(url, data=payload, files=files)
+    
+    # Get the JSON response from the OCR API
+    result = response.json()
+    
+    # Check if the response is successful
+    if result['OCRExitCode'] == 1:
+        # Extract the text
+        extracted_text = result['ParsedResults'][0]['ParsedText']
+        print("Extracted Text: \n"+ extracted_text)
+    else:
+        print("Error: ", result['ErrorMessage'])
+
 
 c.release()
 cv2.destroyAllWindows()
