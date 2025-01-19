@@ -25,16 +25,16 @@ function WelcomeBackPage() {
               <p>Duration: 30 days</p>
             </div>
             <div className="medication">
-              <h2>Meletonin</h2>
+              <h2>Melatonin</h2>
               <p>Dosage: 25 mg</p>
               <p>Frequency: once per day</p>
               <p>Duration: 10 days</p>
             </div>
             <div className="medication">
-              <h2>Amoxicillin</h2>
-              <p>Dosage: 500mg</p>
-              <p>Frequency: once per day</p>
-              <p>Duration: 30 days</p>
+              <h2>Vitamin D</h2>
+              <p>Dosage: 1g</p>
+              <p>Frequency: twice per day</p>
+              <p>Duration: 50 days</p>
             </div>
           </div>
         </main>
