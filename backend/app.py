@@ -36,7 +36,7 @@ else:
         # Key input
         key = cv2.waitKey(1) & 0xFF
         
-        if key == ord('s'):  
+        if key == 13:  
             image_path = "captured_image1.jpg"
             cv2.imwrite(image_path, frame)
             print("Image saved as "+image_path+ ".") #can remove later
