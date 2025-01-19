@@ -1,41 +1,35 @@
-from google.cloud import vision
-import io
+import requests
 
-# Set up the Google Vision client
-def initialize_client(json_key_path):
-    client = vision.ImageAnnotatorClient.from_service_account_json(json_key_path)
-    return client
+# Replace with your OCR Space API key
+api_key = "K86040665488957"
 
-# Perform text detection
-def detect_text(image_path, client):
-    with io.open(image_path, 'rb') as image_file:
-        content = image_file.read()
+# The URL for OCR Space API
+url = "https://api.ocr.space/parse/image"
+
+# Path to the image you want to process
+image_path = "captured_image1.jpg"
+
+# Open the image file
+with open(image_path, 'rb') as f:
+    # Define the request payload
+    payload = {
+        'apikey': api_key,  # Your OCR API key
+        'language': 'eng'   # Language of the text in the image (use 'eng' for English)
+    }
     
-    image = vision.Image(content=content)
-    response = client.text_detection(image=image)
-    texts = response.text_annotations
-
-    if response.error.message:
-        raise Exception(f"Error during text detection: {response.error.message}")
+    # Define the files (image) to send in the request
+    files = {'file': f}
     
-    return texts
-
-# Main function
-def main():
-    # Replace with the path to your service account JSON key
-    json_key_path = "788514574321-ahs82f49c8iqk40mt5aoit7qedjgjn34.apps.googleusercontent.com"
-    image_path = "path/to/your/image.jpg"
-
-    # Initialize the client
-    client = initialize_client(json_key_path)
+    # Make the POST request
+    response = requests.post(url, data=payload, files=files)
     
-    # Detect text
-    texts = detect_text(image_path, client)
-
-    # Print detected text
-    print("Detected text:")
-    for text in texts:
-        print(f"\n{text.description}")
-
-if __name__ == "__main__":
-    main()
+    # Get the JSON response from the OCR API
+    result = response.json()
+    
+    # Check if the response is successful
+    if result['OCRExitCode'] == 1:
+        # Extract the text
+        extracted_text = result['ParsedResults'][0]['ParsedText']
+        print("Extracted Text: ", extracted_text)
+    else:
+        print("Error: ", result['ErrorMessage'])
