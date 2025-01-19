@@ -1,19 +1,24 @@
-import React from 'react';
-import { Camera } from 'react-camera-pro';
+import React, { useState } from 'react';
 import './CameraPage.css';
 
 function CameraPage() {
-  const camera = React.useRef(null);
+  const [scriptOutput, setScriptOutput] = useState('');
 
-  const takePicture = () => {
-    const photo = camera.current.takePhoto();
-    console.log(photo);
+  const openCamera = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/launch-script'); // Update this URL if your server is running on a different port
+      const result = await response.text();
+      setScriptOutput(result);
+    } catch (error) {
+      console.error('Error launching script:', error);
+      setScriptOutput('Error launching script');
+    }
   };
 
   return (
     <div className="camera-page">
-      <Camera ref={camera} />
-      <button onClick={takePicture}>Take Picture</button>
+      <button onClick={openCamera}>Open Camera</button>
+      {scriptOutput && <p>{scriptOutput}</p>}
     </div>
   );
 }

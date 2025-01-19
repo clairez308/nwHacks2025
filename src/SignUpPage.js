@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import './SignUp.css';
+import './SignUpPage.css';
 
 function SignUp() {
   const navigate = useNavigate();
