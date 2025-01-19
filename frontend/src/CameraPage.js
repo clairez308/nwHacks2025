@@ -22,10 +22,21 @@ function CameraPage() {
 
   return (
     <div className="camera-page">
-      <button onClick={openCamera}>Open Camera</button>
+        <header className="header">
+          <div className="app-name">MedEcho</div>
+          <div className="profile">
+            <span>Claire</span>
+            <div className="profile-image"></div>
+          </div>
+        </header>
+      <div className="instruction-text">Press the button below to take a picture</div>
+      <div className='buttons'>
+        <button onClick={openCamera}>Open Camera</button>
       <button type="button" className="submit-button" onClick={handlePic}>
           Finish
         </button>
+        </div>
+      
       {scriptOutput && <p>{scriptOutput}</p>}
     </div>
   );

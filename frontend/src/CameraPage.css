@@ -1,8 +1,43 @@
 .camera-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 20px 80px;
+  }
+
+header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .app-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+  }
+.instruction-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   
@@ -19,5 +54,15 @@
   
   button:hover {
     background-color: #284529;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    .camera-page {
+      height: -webkit-fill-available;
+    }
+    
+    button {
+      bottom: max(40px, env(safe-area-inset-bottom));
+    }
   }
   
