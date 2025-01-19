@@ -5,8 +5,9 @@ import './SignUp.css';
 function SignUp() {
   return (
     <div className="signup-page">
-      <h1>MedEcho</h1>
-      <h2>Sign up</h2>
+      <h2>MedEcho</h2>
+      <h1>Welcome Back!</h1>
+      <p>Input your details to sign back in.</p>
       <form>
         <div className="form-group">
           <label>Email</label>
@@ -16,10 +17,10 @@ function SignUp() {
           <label>Password</label>
           <input type="password" placeholder="Enter your password" />
         </div>
-        <button type="submit" className="submit-button">Sign Up</button>
+        <button type="submit" className="submit-button">Login</button>
       </form>
       <div className="login-link">
-        Already have an account? <Link to="/">Log in</Link>
+        Need to make a new account? <Link to="/">Sign Up</Link>
       </div>
     </div>
   );
