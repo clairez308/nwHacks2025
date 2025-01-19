@@ -3,6 +3,8 @@ import requests
 import spacy
 import medspacy
 import re
+import schedule
+import time
 
 # Load the MedSpaCy model
 nlp = spacy.load("en_core_web_sm")
@@ -83,8 +85,6 @@ def extract_medication_details(text):
     
     # Look for matches for dosage, frequency, and medication name in the text
     for sentence in doc.sents:
-        print(sentence)
-        print("JHDJHDBHJ")
         medication_name = None
         dosage = None
         frequency = None
@@ -127,3 +127,18 @@ if medications:
         print()
 else:
     print("No medication information extracted.")
+
+
+
+# Function to create a reminder
+def create_reminder(medication):
+    schedule.every().day.at("21:21").do(lambda: print(f"Time to take your {medication['medication_name']} ({medication['dosage']}) {medication['frequency']}"))
+    
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+# Example of using extracted medication for reminders
+for med in medications:
+    create_reminder(med)
+
